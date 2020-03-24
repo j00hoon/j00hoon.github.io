@@ -1,0 +1,21 @@
+p#nameP
+{
+    font-weight: bold; 
+    font-size: 70px; 
+    font-style: Arial; 
+    margin-top: 1px; 
+    margin-bottom: 10px; 
+    color: dodgerblue;
+}
+
+span.classSpan
+{
+    font-size: x-large; 
+    font-style: Times New Roman; 
+    color: dodgerblue
+}
+
+div#movieDiv
+{
+    overflow: hidden;
+}
