@@ -1,0 +1,107 @@
+header#grandmaHeading
+{
+    color: rgb(164, 164, 0);
+    background-color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans unicode', Helvetica, Arial, sans-serif;
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heading
+{
+    color: rgb(164, 164, 0);
+    background-color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans unicode', Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: underline;
+}
+
+
+body#bodyPie
+{
+    color: rgb(64, 64, 64);
+    font-size: 11pt;
+}
+
+.fontPage
+{
+    font-family: Georgia, Garamond, serif;
+}
+
+.linkPage
+{
+    color: rgb(164, 164, 0);
+}
+
+.directionsHeading
+{
+    font-weight: bold;
+}
+
+
+.tooltip
+{
+    display: inline-block;
+}
+
+.tooltip .tooltiptext
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    left: 50%;
+    margin-left: -60px;
+    background-color: #555;
+    color: #fff;
+    bottom: 125%;
+    left: 50%;
+    text-align: center;
+}
+
+.tooltip .tooltiptext:after
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.tooltip:hover .tooltiptext
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+span#cakeSpan
+{
+    text-decoration: line-through;
+}
+
+.quote
+{
+    font-style: italic;
+    background-color: rgb(255, 255, 168);
+}
+
+.boldTxt
+{
+    font-weight: bold;
+}
+
+
+pre#copyright
+{
+    text-align: left;
+    text-align-last: right;
+    margin: 0px;
+}
+
+div#divLink
+{
+    position: absolute;
+    left : 10px;
+}
