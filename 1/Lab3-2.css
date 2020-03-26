@@ -1,0 +1,28 @@
+#lab3-2
+{
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+}
+
+#lab3-2 li
+{
+    display: inline;
+    border: 1px solid black;
+    padding: 2px;
+    background-color: white;
+}
+
+/*  The answer
+ul {
+  background-color: red;
+  padding: 20px;
+  text-align: center;
+}
+
+li {
+  display: inline;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+} */

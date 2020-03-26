@@ -1,0 +1,26 @@
+h1
+{
+    background-color: yellow;
+    width: auto;
+    
+}
+
+.areaDiv
+{
+    background-color: lightgray;
+    width: 600px;
+    padding : 10px;
+    overflow: hidden;
+}
+
+.areaDiv1, .areaDiv2
+{
+    
+    left: 400px;
+    background-color: lightblue;
+    float : right;
+    margin-left : 10px;
+}
+
+
+
