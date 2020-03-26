@@ -1,0 +1,93 @@
+div#bigDiv
+{
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;    
+}
+
+
+input[type="email"]
+{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    padding: 5px;
+}
+
+
+
+
+
+div#smallDiv label#shadowLabel
+{
+    font-size: 80%;
+    color: gray;
+}
+
+input[type="password"]
+{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    padding: 5px;
+}
+
+input[id="cbox"]
+{
+    display: none;
+}
+
+input[id="cbox"] + label
+{
+    margin-right: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid skyblue;
+    cursor: pointer;
+}
+
+input[id="cbox"]:checked + label
+{
+    background-color: dodgerblue;
+}
+
+
+
+
+input[type="text"]
+{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+div#submitDiv
+{
+    margin-top: 10px;
+}
+
+div#submitDiv > input
+{
+    color: white;
+    background-color: royalblue;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    font-size: 100%;
+}

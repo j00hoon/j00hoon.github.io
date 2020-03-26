@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="4/Webform2.css">
+
+<title>Webform 2</title>
+
+</head>
+
+<body>
+
+    <form>
+
+        <ul id="leftNav">
+            <li id="firstli">MUM Golden Dome Market:::SRM System</li>
+            <li>|</li>
+            <li><a class="home" href="#">Products</a></li>
+            <li>|</li>
+            <li><a href="#">Suppliers</a></li>
+            
+            <ul id="signin">
+                <label>Hello!</label>
+                <input type="submit" value="Sign in" />
+            </ul>
+        </ul>
+    </form>
+
+    <form id="newProductForm">
+        
+        <label>New Product Form</label>
+
+        <div id="newProductFormDiv">
+            
+
+            <div id="newProductSmallerFormDiv">
+                <label>Product Number</label><br/>
+                <input type="text" />
+            </div>
+
+            <div id="newProductSmallerFormDiv">
+                <label>Quantity in stock</label><br/>
+                <input type="text" placeholder="0" />
+            </div>
+
+            <div id="newProductSmallerFormDiv">
+                <label>Name</label><br/>
+                <input type="text" />
+            </div>
+
+            <div id="newProductSmallerFormDiv">
+                <label>Supplier : </label><br/>
+                <select id="supplier">
+                    <option>Kobe Bryant</option>
+                    <option>LeBron James</option>
+                    <option>Anthony Davis</option>
+                    <option>Dennis Rodman</option>
+                    <option>Luka Doncici</option>
+                </select>
+            </div>
+
+            <div id="newProductSmallerFormDiv">
+                <label>Unit Price</label><br/>
+                <input type="text" step="[0-9]+\.[0-9]?" placeholder="0.0" />
+            </div>
+
+            <div id="newProductSmallerFormDiv">
+                <label>Date supplied</label><br/>
+                <input type="datetime" placeholder="yyyy-mm-dd" /><br/>
+                <label id="validDate">Enter a valid Date.</label>
+            </div>
+
+        </div>
+
+        
+        <div id="buttonDiv">
+
+            <input type="reset" value="Reset"/>
+            <input type="button" value="Cancel"/>
+            <input type="submit" value="Add Product"/>
+
+        </div>
+
+
+
+
+    </form>
+
+
+
+
+</body>
+</html>
