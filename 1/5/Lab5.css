@@ -1,0 +1,10 @@
+div#clock15
+{
+    width: 12%;
+    background-color: black;
+    color: chartreuse;
+    
+    font-weight: bold;
+    font-size: 25px;
+    font-style: sans-serif;
+}

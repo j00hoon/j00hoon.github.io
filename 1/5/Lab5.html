@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="Lab5.css">
+    <title>Lab5</title>
+</head>
+
+<h1>Seunghoon Baik</h1>
+
+
+<body>
+
+    <h2>1</h2>
+    Num1 : <input type="text" id="num1-1" /><br/>
+    Num2 : <input type="text" id="num1-2" /><br/>
+    <button onclick="max()">MAX</button><br/><br/>
+    Result - MAX : <input type="text" id="result1-1" />
+    <br/><br/></br>
+
+
+
+
+    <h2>2</h2>
+    Num1 : <input type="text" id="num2-1" /><br/>
+    Num2 : <input type="text" id="num2-2" /><br/>
+    Num3 : <input type="text" id="num2-3" /><br/>
+    <button onclick="maxOfThree()">MAX_OF_THREE</button><br/><br/>
+    Result - MAX_OF_THREE : <input type="text" id="result2-1" />
+    <br/><br/></br>
+        
+
+
+    <h2>3</h2>
+    Character : <input type="text" id="char3-1" /><br/>
+    <button onclick="isVowel()">IS_VOWEL</button><br/><br/>
+    Result - IS_VOWEL : <input type="text" id="result3-1" />
+    <br/><br/></br>
+
+
+    <h2>4</h2>
+    Num1 : <input type="text" id="num4-1" /><br/>
+    Num2 : <input type="text" id="num4-2" /><br/>
+    Num3 : <input type="text" id="num4-3" /><br/>
+    <button onclick="SUM_MULTIPLY()">SUM_MULTIPLY</button><br/><br/>
+    Result - SUM : <input type="text" id="result4-1" />
+    Result - MULTIPLY : <input type="text" id="result4-2" />
+    <br/><br/></br>
+
+
+    <h2>5</h2>
+    String : <input type="text" id="str5-1" /><br/>
+    <button onclick="reverseQ5()">REVERSE</button><br/><br/>
+    Result - REVERSE : <input type="text" id="result5-1" />
+    <br/><br/></br>
+    
+
+
+    <h2>6</h2>
+    String(To make it as an array, insert the space between the word) : <input type="text" id="str6-1" /><br/>
+    <button onclick="findLongestWord()">LONGEST ONE</button><br/><br/>
+    Result - LONGEST ONE : <input type="text" id="result6-1" />
+    <br/><br/></br>
+    
+    
+    
+    <h2>7</h2>
+    String(To make it as an array, insert the space between the word) : <input type="text" id="str7-1" /><br/>
+    Integer : <input type="text" id="int7-2" /><br/>
+    <button onclick="findLongestWordArray()">LONGEST WORD</button><br/><br/>
+    Result - LONGEST WORD : <input type="text" id="result7-1" />
+    <br/><br/></br>
+
+
+    <h2>8</h2>
+    Num1 : <input type="text" id="num8-1" /><br/>
+    Num2 : <input type="text" id="num8-2" /><br/>
+    Num3 : <input type="text" id="num8-3" /><br/>
+    <button onclick="computeSumOfSquares()">SUM_SQUARE</button><br/><br/>
+    Result - SUM_SQUARE : <input type="text" id="result8-1" />
+    <br/><br/></br>
+
+
+    <h2>9</h2>
+    Number(To make it as an array, insert the space between the number) : <input type="text" id="num9-1" /><br/>
+    <button onclick="printOddNumbersOnly()">ODD_NUMBER</button><br/><br/>
+    Result - ODD_NUMBER : <input type="text" id="result9-1" />
+    <br/><br/></br>
+
+
+
+    <h2>10</h2>
+    Number(To make it as an array, insert the space between the number) : <input type="text" id="num10-1" /><br/>
+    <button onclick="computeSumOfSquaresOfEvensOnly()">SUM_SQUARE_EVEN_NUMBER</button><br/><br/>
+    Result - SUM_SQUARE_EVEN_NUMBER : <input type="text" id="result10-1" />
+    <br/><br/></br>
+
+
+    <h2>11</h2>
+    Num1 : <input type="text" id="num11-1" /><br/>
+    Num2 : <input type="text" id="num11-2" /><br/>
+    Num3 : <input type="text" id="num11-3" /><br/>
+    <button onclick="sum_multiply_reduce()">SUM_MULTIPLY_REDUCE</button><br/><br/>
+    Result - SUM_REDUCE : <input type="text" id="result11-1" />
+    Result - MULTIPLY_REDUCE : <input type="text" id="result11-2" />
+    <br/><br/></br>
+
+
+
+    <h2>12</h2>
+    Number(To make it as an array, insert the space between the number) : <input type="text" id="num12-1" /><br/>
+    <button onclick="findSecondBiggest()">SECOND_BIGGEST</button><br/><br/>
+    Result - SECOND_BIGGEST : <input type="text" id="result12-1" />
+    <br/><br/></br>
+
+
+
+    <h2>13</h2>
+    Length : <input type="text" id="len13-1" /><br />
+    Starting number 1 : <input type="text" id="snum13-1" /><br />
+    Starting number 2 : <input type="text" id="snum13-2" /><br />
+    <button onclick="printFibo()">FIBO</button><br/><br/>
+    Result - FIBO : <input type="text" id="result13-1" />
+    <br/><br/></br>
+
+
+
+    <h2>Clock</h2>
+    <div id="clock15"></div>
+    
+
+
+
+
+    
+
+<script type="text/javascript">
+
+/////////////////////////////  1   /////////////////////////////////////////////////////
+function max() {
+
+    var num1 = document.getElementById("num1-1").value;
+    var num2 = document.getElementById("num1-2").value;
+
+    if(num1 > num2){
+        document.getElementById("result1-1").value = "Num1, " + num1;
+    }// if
+    else if(num1 < num2){
+        document.getElementById("result1-1").value = "Num2, " + num2;
+    }// else if
+    else{
+        document.getElementById("result1-1").value = "Same Value";
+    }
+}
+
+/////////////////////////////  1   /////////////////////////////////////////////////////
+
+////////////////////////////   2   //////////////////////////////////////////////////////
+
+function maxOfThree(){
+
+    var num1 = document.getElementById("num2-1").value;
+    var num2 = document.getElementById("num2-2").value;
+    var num3 = document.getElementById("num2-3").value;
+    var min = num1;
+    const arr = [num1, num2, num3];
+
+    for(let i = 0; i < 3; i++){
+        if(arr[i] < min){
+            min = arr[i];
+        }// if
+    }// for
+    
+
+    document.getElementById("result2-1").value = min;
+    
+}
+
+////////////////////////////   2   //////////////////////////////////////////////////////
+
+////////////////////////////   3   //////////////////////////////////////////////////////
+
+function isVowel(){
+
+    var cha = document.getElementById("char3-1").value;
+    var cha2 = cha.toLowerCase();
+    //const arr = ['a', 'e', 'i', 'o', 'u'];
+    var res;
+
+    res = (cha2 === 'a' || cha2 === 'e' || cha2 === 'i' || cha2 === 'o' || cha2 === 'u');
+    document.getElementById("result3-1").value = res;
+}
+
+////////////////////////////   3   //////////////////////////////////////////////////////
+
+////////////////////////////   4   //////////////////////////////////////////////////////
+
+function SUM_MULTIPLY(){
+
+    const arr = [document.getElementById("num4-1").value, document.getElementById("num4-2").value, document.getElementById("num4-3").value];
+    var res1 = 0;
+    var res2 = 1;
+
+    for(let i = 0; i < arr.length; i++){
+        res1 += parseInt(arr[i]);
+        res2 *= parseInt(arr[i]);
+    }// for
+
+    document.getElementById("result4-1").value = res1;
+    document.getElementById("result4-2").value = res2;
+
+}
+
+////////////////////////////   4   //////////////////////////////////////////////////////
+
+////////////////////////////   5   //////////////////////////////////////////////////////
+
+function reverseQ5(){
+
+    var str = document.getElementById("str5-1").value;
+    var res = "";
+
+    for(let i = str.length - 1; i >= 0; i--){
+        res += str[i];
+    }// for
+
+    document.getElementById("result5-1").value = res;
+
+}
+
+
+
+////////////////////////////   5   //////////////////////////////////////////////////////
+
+////////////////////////////   6   //////////////////////////////////////////////////////
+
+function findLongestWord(){
+
+    var str = document.getElementById("str6-1").value;
+    var res = str.split(" ");
+    var len = parseInt(res[0].length);
+
+    for(let i = 0; i < res.length; i++){
+        if(len < parseInt(res[i].length)){
+            len = res[i].length;
+        }// if
+    }// for
+
+    document.getElementById("result6-1").value = len;
+
+}
+
+
+////////////////////////////   6   //////////////////////////////////////////////////////
+
+
+////////////////////////////   7   //////////////////////////////////////////////////////
+
+function findLongestWordArray(){
+
+    var str = document.getElementById("str7-1").value;
+    var res = str.split(" ");
+    var len = parseInt(res[0].length);
+    var resStr = "";
+    var resStrArr =[];
+    var num = document.getElementById("int7-2").value;
+
+    for(let i = 0; i < res.length; i++){
+        if(len < parseInt(res[i].length)){
+            len = res[i].length;
+            resStr = res[i];
+        }// if
+    }// for
+
+    for(let i = 0; i < num; i++){
+        resStrArr[i] = resStr;   
+    }// for
+
+    document.getElementById("result7-1").value = resStrArr;
+
+}
+
+
+////////////////////////////   7   //////////////////////////////////////////////////////
+
+
+////////////////////////////   8   //////////////////////////////////////////////////////
+
+function computeSumOfSquares(){
+
+    var n1 = parseInt(document.getElementById("num8-1").value);
+    var n2 = parseInt(document.getElementById("num8-2").value);
+    var n3 = parseInt(document.getElementById("num8-3").value);
+
+    const arr = [n1, n2, n3];
+
+    var squ = function(n){
+        return n * n;
+    }
+
+    const res = arr.map(squ).reduce((left, val) =>  
+        left + val
+        );
+    
+    document.getElementById("result8-1").value = res;
+
+}
+
+
+
+////////////////////////////   8   //////////////////////////////////////////////////////
+
+////////////////////////////   9   //////////////////////////////////////////////////////
+
+function printOddNumbersOnly(){
+
+    var arr = document.getElementById("num9-1").value;
+    var res = arr.split(" ");
+    var resArr = [];
+    var j = 0;
+
+    for(let i = 0; i < res.length; i++){
+        if(res[i] % 2 !== 0){
+            resArr[j] = res[i];
+            j++;
+        }// if
+    }// for
+
+    document.getElementById("result9-1").value = resArr;
+
+}
+
+////////////////////////////   9   //////////////////////////////////////////////////////
+
+
+
+////////////////////////////   10   //////////////////////////////////////////////////////
+
+function computeSumOfSquaresOfEvensOnly(){
+
+    var arr = document.getElementById("num10-1").value;
+    var res = arr.split(" ");
+
+    var evenNum = function(n){
+        return n % 2 == 0
+    }
+    var squ = function(n){
+        return n * n;
+    }
+    
+    const resArr = res.filter(evenNum).map(squ).reduce((left, val) =>
+            left + val
+        );
+
+
+    document.getElementById("result10-1").value = resArr;
+}
+
+////////////////////////////   10   //////////////////////////////////////////////////////
+
+
+////////////////////////////   11   //////////////////////////////////////////////////////
+
+function sum_multiply_reduce(){
+
+    const arr = [document.getElementById("num11-1").value, document.getElementById("num11-2").value, document.getElementById("num11-3").value];
+
+    const sum = arr.reduce((prev, val) => 
+        parseInt(prev) + parseInt(val)
+        );
+
+    const mul = arr.reduce((prev, val) =>
+        prev * val
+        );
+
+    document.getElementById("result11-1").value = sum;
+    document.getElementById("result11-2").value = mul;
+
+}
+
+////////////////////////////   11   //////////////////////////////////////////////////////
+
+
+
+////////////////////////////   12   //////////////////////////////////////////////////////
+
+function findSecondBiggest(){
+
+    var arr = document.getElementById("num12-1").value;
+    var res = arr.split(" ");
+
+    res = res.sort().reverse();
+
+
+    document.getElementById("result12-1").value = res[1];
+}
+
+
+////////////////////////////   12   //////////////////////////////////////////////////////
+
+
+
+////////////////////////////   13   //////////////////////////////////////////////////////
+
+function printFibo(){
+
+    const lenFibo = document.getElementById("len13-1").value;
+    var snum1 = parseInt(document.getElementById("snum13-1").value);
+    var snum2 = parseInt(document.getElementById("snum13-2").value);
+
+    var resFibo = [];
+    var sum = 0;
+
+    for(let i = 0; i < lenFibo; i++){
+
+        resFibo[i] = snum1; 
+        sum = snum1 + snum2;
+        snum1 = snum2;
+        snum2 = sum;
+
+    }// for
+
+    document.getElementById("result13-1").value = resFibo;
+}
+
+
+////////////////////////////   13   //////////////////////////////////////////////////////
+
+
+
+////////////////////////////   15   //////////////////////////////////////////////////////
+
+currentTime();
+
+function currentTime(){
+    var date = new Date();
+
+    var year = date.getFullYear();
+    var month = date.getMonth();
+    var date2 = date.getDate();
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var weekDay = days[date.getDay()];
+    
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+
+    var mid = "AM";
+    mid = (hour >= 12) ? "PM" : "AM";
+    hour = (hour === 0) ? 12 : ((hour > 12) ? (hour - 12) : hour);
+
+    hour = updateTime(hour);
+    min = updateTime(min);
+    sec = updateTime(sec);
+    
+    document.getElementById("clock15").innerHTML = year + " / " + month + " / " + date2 + " / " + weekDay + "<br \>" + hour + " : " + min + " : " + sec + " " + mid;
+
+    var tt = setTimeout(currentTime, 1000);
+}
+
+function updateTime(t){
+    if(t < 10){
+        return "0" + t;
+    }
+    return t;
+}
+
+////////////////////////////   15   //////////////////////////////////////////////////////
+
+
+</script>
+
+</body>
+</html>

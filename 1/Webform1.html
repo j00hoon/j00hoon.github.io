@@ -12,27 +12,42 @@
 
 <body>
 
-<form>
+<script type="text/javascript">
+
+function loginFunc(){
+    var email = document.getElementById("emailAddr").value;
+    console.log("Email : " + email);
+
+    var pwd = document.getElementById("pwd").value;
+    console.log("Password : " + pwd);
+
+    var url = document.getElementById("url").value;
+    console.log("Url : " + url);
+}
+
+</script>
+
+<form onsubmit="loginFunc()">
 
     <div id="bigDiv">
 
         <div id="smallDiv">
             <label for="emailAddr">Email address</label><br/>
-            <input type="email" name="emailAddr" placeholder="Enter email" /><br />
+            <input type="email" id="emailAddr" name="emailAddr" placeholder="Enter email" /><br />
             <label id="shadowLabel">We'll never share your email with anyone else.</label>
         </div>
         <br/>
 
         <div id="smallDiv">
             <label for="password">Password</label><br/>
-            <input type="password" name="password" placeholder="Password" pattern="[A-Za-z]{10}" /><br />
+            <input type="password" id="pwd" name="password" placeholder="Password" pattern="[A-Za-z]{10}" /><br />
             <input type="checkbox" id="cbox" /> <label for="cbox" ></label>Check me out
         </div>
         <br/>
 
         <div id="smallDiv">
             <label for="URL">URL</label><br/>
-            <input type="text" name="URL" placeholder="Enter URL" pattern="https?://.+" /><br />
+            <input type="text" id="url" name="URL" placeholder="Enter URL" pattern="https?://.+" /><br />
         </div>
         <br/>
 
@@ -41,6 +56,8 @@
         </div>
 
     </div>
+
+    
     
 
 </form>

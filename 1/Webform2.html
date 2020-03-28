@@ -12,6 +12,23 @@
 
 <body>
 
+
+<script type="text/javascript">
+
+    function newProduct(){
+        var prodNum = document.getElementById("prodNum").value;
+        var quant = document.getElementById("quant").value;
+        var name = document.getElementById("name").value;
+        var supplier = document.getElementById("supplier").value;
+        var unitPrice = document.getElementById("unitPrice").value;
+        var dateSupplied = document.getElementById("dateSupplied").value;
+
+        alert("Product Number : " + prodNum + "\n" + "Quantity Number : " + quant + "\n" + "Name : " + name + "\n" + "Supplier : " + supplier + "\n" + "Unit Price : " + unitPrice + "\n" + "Date Supplied : " + dateSupplied + "\n");
+    }
+    
+    </script>
+
+
     <form>
 
         <ul id="leftNav">
@@ -28,7 +45,7 @@
         </ul>
     </form>
 
-    <form id="newProductForm">
+    <form id="newProductForm" onsubmit="newProduct()">
         
         <label>New Product Form</label>
 
@@ -37,17 +54,17 @@
 
             <div id="newProductSmallerFormDiv">
                 <label>Product Number</label><br/>
-                <input type="text" />
+                <input type="text" id="prodNum" />
             </div>
 
             <div id="newProductSmallerFormDiv">
                 <label>Quantity in stock</label><br/>
-                <input type="text" placeholder="0" />
+                <input type="text" id="quant" placeholder="0" />
             </div>
 
             <div id="newProductSmallerFormDiv">
                 <label>Name</label><br/>
-                <input type="text" />
+                <input type="text" id="name" />
             </div>
 
             <div id="newProductSmallerFormDiv">
@@ -63,12 +80,12 @@
 
             <div id="newProductSmallerFormDiv">
                 <label>Unit Price</label><br/>
-                <input type="text" step="[0-9]+\.[0-9]?" placeholder="0.0" />
+                <input type="text" id="unitPrice" step="[0-9]+\.[0-9]?" placeholder="0.0" />
             </div>
 
             <div id="newProductSmallerFormDiv">
                 <label>Date supplied</label><br/>
-                <input type="datetime" placeholder="yyyy-mm-dd" /><br/>
+                <input type="datetime" id="dateSupplied" placeholder="yyyy-mm-dd" /><br/>
                 <label id="validDate">Enter a valid Date.</label>
             </div>
 
