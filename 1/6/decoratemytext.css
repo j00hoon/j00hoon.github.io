@@ -1,0 +1,23 @@
+ div#backGround > img
+ {
+     max-width: 50%;
+     max-height: 50%;
+ }
+
+fieldset#textFieldset
+{
+    box-sizing: border-box;
+}
+
+fieldset#textFieldset > textarea
+{
+    font-size: 15px;
+}
+
+
+
+fieldset#textFieldset > legend
+{
+    font-weight: bold;
+    font-size: 30px;
+}
