@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>W2D2 Lab</title>
+</head>
+
+<h1>Seunghoon Baik</h1>
+
+
+<body>
+
+<script type="text/javascript">
+
+//////////////////////// 6 //////////////////////////
+var add = (function(){
+    var counter = 0;
+
+    function add(){
+        return counter += 1;
+    }
+
+    function reset(){
+        counter = 0;
+    }
+})();
+//////////////////////// 6 //////////////////////////
+
+
+
+//////////////////////// 7 //////////////////////////
+
+/* 
+
+The variable counter is a free variable.
+A free variable is the variable that is being used in the inner function, but the variable is not declared inside the inner function. It is declared from the outter function.
+It is not only about a variable. It could be also a function, or any other resources.
+
+*/
+
+//////////////////////// 7 //////////////////////////
+
+
+
+//////////////////////// 8 //////////////////////////
+
+var add5 = (function(){
+    var counter = 0;
+
+    function make_adder(n){
+        return function(){
+            return counter += n;
+        }
+    }
+})();
+
+
+//////////////////////// 8 //////////////////////////
+
+
+//////////////////////// 9 //////////////////////////
+
+/* 
+    We can manage the whole names by using closures - module pattern.
+    Languages such as Java provide private methods, but JavaScript does not provide this, so we need to emulate with closures.
+*/
+
+//////////////////////// 9 //////////////////////////
+
+
+
+//////////////////////// 10 //////////////////////////
+
+const Employee = (function(){
+    
+    const name;
+    const age;
+    const salary;
+
+    function setAge(newAge){
+        age = newAge;
+    };
+    function setSalary(newSalary){
+        salary = newSalary;
+    };
+    function setName(newName){
+        name = newName;
+    };
+
+    function getAge(){
+        return age;
+    };
+    function getSalary(){
+        return salary;
+    };
+    function getName(){
+        return name;
+    };
+
+    function increaseSalary(percentage){
+        salary += (getSalary() * percentage);
+    };
+    function incrementAge(){
+        age += getAge();
+    };
+
+    return{
+        setAgeMethod : setAge, 
+        setSalaryMethod : setSalary,
+        setNameMethod : setName,
+        increaseSalaryMethod : increaseSalary,
+        incrementAgeMethod : incrementAge
+    };
+
+})();
+
+//////////////////////// 10 //////////////////////////
+
+
+
+//////////////////////// 11 //////////////////////////
+
+/*
+
+Outside the code, add the below code.
+
+Employee.extension = function(){
+    const address;
+
+    function setAddress(newAddr){
+        address = newAddr;
+    };
+    
+    function getAddress(){
+        return address;
+    };
+
+    return{
+        addrVar : address,
+        setAddrMethod : setAddress,
+        getAddrMethod : getAddress
+    };
+    
+};
+
+
+*/
+
+//////////////////////// 11 //////////////////////////
+
+</script>
+
+</body>
+</html>
