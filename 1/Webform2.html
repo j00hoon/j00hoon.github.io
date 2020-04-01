@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="4/Webform2.css">
@@ -13,18 +14,33 @@
 <body>
 
 
-<script type="text/javascript">
+<script>
 
-    function newProduct(){
-        var prodNum = document.getElementById("prodNum").value;
-        var quant = document.getElementById("quant").value;
-        var name = document.getElementById("name").value;
-        var supplier = document.getElementById("supplier").value;
-        var unitPrice = document.getElementById("unitPrice").value;
-        var dateSupplied = document.getElementById("dateSupplied").value;
+    // function newProduct(){
+    //     var prodNum = document.getElementById("prodNum").value;
+    //     var quant = document.getElementById("quant").value;
+    //     var name = document.getElementById("name").value;
+    //     var supplier = document.getElementById("supplier").value;
+    //     var unitPrice = document.getElementById("unitPrice").value;
+    //     var dateSupplied = document.getElementById("dateSupplied").value;
 
-        alert("Product Number : " + prodNum + "\n" + "Quantity Number : " + quant + "\n" + "Name : " + name + "\n" + "Supplier : " + supplier + "\n" + "Unit Price : " + unitPrice + "\n" + "Date Supplied : " + dateSupplied + "\n");
-    }
+    //     alert("Product Number : " + prodNum + "\n" + "Quantity Number : " + quant + "\n" + "Name : " + name + "\n" + "Supplier : " + supplier + "\n" + "Unit Price : " + unitPrice + "\n" + "Date Supplied : " + dateSupplied + "\n");
+    // }
+
+    $(document).ready(function(){
+        $("form#newProductForm").submit(function(){
+            var prodNum = document.getElementById("prodNum").value;
+            var quant = document.getElementById("quant").value;
+            var name = document.getElementById("name").value;
+            var supplier = document.getElementById("supplier").value;
+            var unitPrice = document.getElementById("unitPrice").value;
+            var dateSupplied = document.getElementById("dateSupplied").value;
+
+            $("div#buttonDiv").append("<p> Product Num : " + prodNum + "</p>" + "<p> Name : " + name + "</p>" + "<p> Unit Price : " + unitPrice + "</p>" + 
+            "<p> Quantity : " + quant + "</p>" + "<p> Supplier : " + supplier + "</p>" + "<p> Date : " + dateSupplied + "</p>");
+            alert("Pause!!!");
+        });
+    });
     
     </script>
 
@@ -45,7 +61,8 @@
         </ul>
     </form>
 
-    <form id="newProductForm" onsubmit="newProduct()">
+    <!-- <form id="newProductForm" onsubmit="newProduct()"> -->
+        <form id="newProductForm" >
         
         <label>New Product Form</label>
 

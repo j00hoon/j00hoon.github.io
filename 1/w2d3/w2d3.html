@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>W2D3 Lab</title>
+</head>
+
+<h1>Seunghoon Baik</h1>
+
+<script>
+
+"use strict"
+
+/////////////////////////////////////////// 1 /////////////////////////////////////////////
+
+const Person = {
+
+  'name' : "",
+  'dateOfBirth' : "",
+  'getName' : function(){
+    return name;
+  },
+  'setName' : function(str){
+    name = str;
+  }
+};
+
+const me = Object.create(Person);
+me.setName("John");
+me.dateOfBirth = new Date('10 December 1998');
+
+console.log("The person's name is " + me.getName());
+console.log(me.getName() + " was born on " + me.dateOfBirth.getFullYear() + "-" + (me.dateOfBirth.getMonth() + 1) + "-" + me.dateOfBirth.getDate());
+
+/////////////////////////////////////////// 1 /////////////////////////////////////////////
+
+
+/////////////////////////////////////////// 2 /////////////////////////////////////////////
+
+const Employee = Object.create(Person);
+
+Employee.Salary = "0 dollar";
+Employee.hireDate = new Date();
+Employee.setName("Anna");
+
+Employee.setSalary = function(sal){
+	Employee.Salary = sal;
+}
+
+Employee.doJob = function(str){
+	console.log(Employee.getName() + " is a " + str + " who earns " + "$" + Employee.Salary);
+}
+
+Employee.setSalary("249,995.50");
+Employee.doJob("Programmer");
+
+/////////////////////////////////////////// 2 /////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////// 3 /////////////////////////////////////////////
+
+function Person(name, date){
+	this.Name = name,
+  this.DateOfBirth = new Date(date);
+}
+
+Person.prototype.toString = function(){
+	return "{Name : " + this.Name + ", " + this.DateOfBirth.getFullYear() + "-" + (this.DateOfBirth.getMonth() + 1) + "-" + this.DateOfBirth.getDate() + "}";
+}
+
+
+const me = new Person("Peter", "10 November 1985");
+console.log(me.toString());
+
+/////////////////////////////////////////// 3 /////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////// 4 /////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////// 4 /////////////////////////////////////////////
+
+</script>
+
+
+
+<body>
+
+</body>
+</html>
