@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="4/Webform1.css">
+
+<title>Webform 1</title>
+
+</head>
+
+<body>
+
+<script>
+
+//////////////////////////////////////// Lab 4 //////////////////////////////////////////////
+// function loginFunc(){
+//     var email = document.getElementById("emailAddr").value;
+//     console.log("Email : " + email);
+
+//     var pwd = document.getElementById("pwd").value;
+//     console.log("Password : " + pwd);
+
+//     var url = document.getElementById("url").value;
+//     console.log("Url : " + url);
+// }
+//////////////////////////////////////// Lab 4 //////////////////////////////////////////////
+
+
+
+
+
+//////////////////////////////////////// Lab W2D3 4th Q //////////////////////////////////////////////
+
+$(document).ready(function(){
+    $("input#submitBtnID").click(function(){
+        var email = document.getElementById("emailAddr").value;
+        console.log("Email : " + email);
+
+        var pwd = document.getElementById("pwd").value;
+        console.log("Password : " + pwd);
+
+        var url = document.getElementById("url").value;
+        console.log("Url : " + url);
+    });
+});
+
+//////////////////////////////////////// Lab W2D3 4th Q //////////////////////////////////////////////
+
+
+</script>
+
+<!-- <form onsubmit="loginFunc()"> -->
+<form >
+    <div id="bigDiv">
+
+        <div id="smallDiv">
+            <label for="emailAddr">Email address</label><br/>
+            <input type="email" id="emailAddr" name="emailAddr" placeholder="Enter email" /><br />
+            <label id="shadowLabel">We'll never share your email with anyone else.</label>
+        </div>
+        <br/>
+
+        <div id="smallDiv">
+            <label for="password">Password</label><br/>
+            <input type="password" id="pwd" name="password" placeholder="Password" pattern="[A-Za-z]{10}" /><br />
+            <input type="checkbox" id="cbox" /> <label for="cbox" ></label>Check me out
+        </div>
+        <br/>
+
+        <div id="smallDiv">
+            <label for="URL">URL</label><br/>
+            <input type="text" id="url" name="URL" placeholder="Enter URL" pattern="https?://.+" /><br />
+        </div>
+        <br/>
+
+        <div id="submitDiv">
+            <input type="submit" id="submitBtnID" value="Submit" />
+        </div>
+
+    </div>
+
+    
+    
+
+</form>
+
+</body>
+</html>

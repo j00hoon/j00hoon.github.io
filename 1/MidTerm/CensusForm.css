@@ -1,0 +1,208 @@
+ul#leftNav
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: steelblue;
+}
+
+ul#leftNav li
+{
+    color: white;
+    font-size: 40px;
+    float: left;
+    
+    padding-right: 2%;
+}
+
+ul#leftNav > li#firstli
+{
+    padding-right: 5%;
+}
+
+ul#leftNav a 
+{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+ul#leftNav a:hover
+{
+    padding: 100% 0 100% 0;
+    background-color: blue;
+}
+
+ul#leftNav > ul#signin
+{
+    float: right;
+}
+
+ul#clock > div
+{
+    color: white;
+    margin-right: 10px;
+    
+    position: absolute;
+    right : 6.5%;
+    top : 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form#censusForm
+{
+    margin: 3%;
+}
+
+form#censusForm > label
+{
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 3%;
+}
+
+div#censusFormDiv
+{
+    margin : 3%;
+    display: grid;
+    /* grid-template-columns: 50% 50%;
+    grid-template-rows: 100% 100% 100%; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100%;
+}
+
+div#censusFormDiv > div#censusSmallerFormDiv
+{
+    margin: 10px;
+}
+
+div#censusSmallerFormDiv > label
+{
+    font-size: 20px;
+}
+
+div#censusSmallerFormDiv > input
+{
+    width: 90%;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+div#censusSmallerFormDiv > input#fullName
+{
+    
+}
+
+div#censusSmallerFormDiv label#shadowLabel
+{
+    font-size: 80%;
+    color: gray;
+}
+
+
+
+div#censusSmallerFormDiv > select#state
+{
+    width: 93%;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+div#censusSmallerFormDivSenior 
+{
+    font-size: 20px;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+form#censusForm > div#buttonDiv
+{
+    font-weight: bold;
+
+    position: absolute;
+    right: 17%;
+
+    display: grid;
+    grid-template-columns: 50% 50% 50%;
+    
+}
+
+div#buttonDiv > input[type="reset"]
+{
+    border-radius: 5px 5px 5px 5px;
+    width: 90%;
+    padding: 5px;
+    border-color: dodgerblue;
+    background-color: white;
+    color: dodgerblue;
+}
+
+
+div#buttonDiv > input[type="submit"]
+{
+    border-radius: 5px 5px 5px 5px;
+    width: 120%;
+    padding: 5px;
+    border-color: forestgreen;
+    background-color: white;
+    color: forestgreen;
+}
+
+
+
+
+
+
+
+
+
+table#myTable
+{
+    margin-top: 5%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table#myTable th
+{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}

@@ -1,0 +1,81 @@
+ul#leftNav
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: steelblue;
+}
+
+ul#leftNav li
+{
+    color: white;
+    font-size: 40px;
+    float: left;
+    
+    padding-right: 2%;
+}
+
+ul#leftNav > li#firstli
+{
+    padding-right: 5%;
+}
+
+ul#leftNav a 
+{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+ul#leftNav a:hover
+{
+    padding: 100% 0 100% 0;
+    background-color: blue;
+}
+
+ul#leftNav > ul#signin
+{
+    float: right;
+}
+
+ul#clock > div
+{
+    color: white;
+    margin-right: 10px;
+    
+    position: absolute;
+    right : 6.5%;
+    top : 4%;
+}
+
+
+
+
+
+
+div#divBody
+{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+header
+{
+    font-family: 'Lucida Sans unicode', Helvetica, Arial, sans-serif;
+    font-size: 22pt;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+img#censusImage
+{
+    float:right;
+}
+
+text#textId
+{
+    clear:right;
+}

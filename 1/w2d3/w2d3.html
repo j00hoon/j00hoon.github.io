@@ -49,7 +49,7 @@ Employee.setSalary = function(sal){
 }
 
 Employee.doJob = function(str){
-	console.log(Employee.getName() + " is a " + str + " who earns " + "$" + Employee.Salary);
+	console.log(this.getName() + " is a " + str + " who earns " + "$" + this.Salary);
 }
 
 Employee.setSalary("249,995.50");

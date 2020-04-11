@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="CensusForm.css">
+
+<title>CensusForm - Midterm</title>
+
+<script>
+$(document).ready(function(){
+
+    var cID = document.getElementById("citizenID").value;
+    var ssn = document.getElementById("ssnNum").value;
+    var fname = document.getElementById("fullName").value;
+    var stateNum = document.getElementById("state").value;
+    var senior = document.getElementsByClassName("radioButton").value;
+
+    
+
+    $("#submitID").click(function(){
+
+        $("#myTable").append("<tr><td>" + cID + "</td>" + "<td>" + ssn + "</td>" + "<td>" + fname + "</td>" + "<td>" + stateNum + "</td>" + "<td>" + senior + "</td>" + "</tr>");
+
+        alert("Seunghoon Baik");
+        return false;
+    });
+
+});
+
+
+</script>
+</head>
+
+<body>
+
+
+    <ul id="leftNav">
+        <li id="firstli">The South West - Regional Census</li>
+        <li>|</li>
+        <li><a class="home" href="Homepage.html">Home</a></li>
+        <li>|</li>
+        <li><a href="#">Census Form</a></li>
+        
+        <ul id="clock">
+            <div id="clock15"></div>
+        </ul>
+    </ul>
+
+
+
+
+
+
+    <form id="censusForm" >
+        
+        <label>Census Form</label>
+
+        <div id="censusFormDiv">
+            
+
+            <div id="censusSmallerFormDiv">
+                <label>*Full Name : </label><br/>
+                <input type="text" id="fullName" /><br/>
+                <label id="shadowLabel">Enter your full name as printed on your Government-issued ID</label>
+            </div>
+
+            <br>
+            <div id="censusSmallerFormDiv">
+                <label>*Citizen ID</label><br/>
+                <input type="text" id="citizenID" pattern="[1-9]{1}[0-9]{9}" /><br/>
+                <label id="shadowLabel">Enter your 10-Digit Citizen ID</label>
+            </div>
+
+            <div id="censusSmallerFormDiv">
+                <label>*Social Security Number</label><br/>
+                <input type="text" id="ssnNum" placeholder="XXX-XX-XXXX" pattern="^\d{3}-\d{2}-\d{4}$" />
+                <br/>
+                <label id="shadowLabel">Enter your Social Security Number(in the format shown)</label>
+            </div>
+
+            <div id="censusSmallerFormDiv">
+                <label>*State</label><br/>
+                <select id="state">
+                    <option value="" selected data-default>Select...</option>
+                    <option>Arizona</option>
+                    <option>New Mexico</option>
+                    <option>Texas</option>
+                </select>
+                <br/>
+                <label id="shadowLabel">Select your state of residence</label>
+            </div>
+
+            <div id="censusSmallerFormDivSenior">
+                <label>*Senior Citizen?</label><br/>
+                <input type="radio" name="radioButton" value="Yes" />Yes<br/>
+                <input type="radio" name="radioButton" value="No" />No<br/>
+            </div>
+
+        </div>
+
+        
+        <div id="buttonDiv">
+
+            <input type="reset" value="Reset"/>
+            <input id="submitID" type="submit" value="Save Book"/>
+
+        </div>
+
+        <div id="tableDiv">
+            <table id="myTable">
+                <tr>
+                    <th>Citizen ID</th>
+                    <th>Social Security</th>
+                    <th>Full Name</th>
+                    <th>State</th>
+                    <th>Senior</th>
+                </tr>
+               
+            </table>
+        </div>
+    
+
+<script>
+currentTime();
+
+function currentTime(){
+    var date = new Date();
+
+    var year = date.getFullYear();
+    
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var month2 = month[date.getMonth()];
+
+    var date2 = date.getDate();
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var weekDay = days[date.getDay()];
+    
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+
+    var mid = "AM";
+    mid = (hour >= 12) ? "PM" : "AM";
+    hour = (hour === 0) ? 12 : ((hour > 12) ? (hour - 12) : hour);
+
+    hour = updateTime(hour);
+    min = updateTime(min);
+    sec = updateTime(sec);
+    
+    document.getElementById("clock15").innerHTML = weekDay + ", " + date2 + " " + month2 + " " + " " + " " + year  + " - " + hour + " : " + min + " : " + sec + " " + mid;
+
+    var tt = setTimeout(currentTime, 1000);
+}
+
+function updateTime(t){
+    if(t < 10){
+        return "0" + t;
+    }
+    return t;
+}
+    
+</script>
+    
+</body>
+</html>
