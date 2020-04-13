@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style/homepage.css">
+    <title>Add Book</title>
+</head>
+
+
+<body>
+
+<form>
+    <ul id="leftNav">
+        <li id="firstli">Library Management System</li>
+        <li>|</li>
+        <li><a class="home" href="index.html">Home</a></li>
+        <li>|</li>
+        <li><a href="#">Add Book</a></li>
+        <li>|</li>
+        <li><a href="bookList.html">Books List</a></li>
+
+        <ul id="signin">
+            <label>Hello!</label>
+            <input type="submit" value="Sign in" />
+        </ul>
+    </ul>
+</form>
+
+
+<form id="libraryForm" name="libraryFormName" method="post" action="https://elibraryrestapi.herokuapp.com/elibrary/api/book/add">
+
+    <label>Add Book</label>
+
+    <div id="libraryFormDiv">
+
+
+        <div class="libraryFormSmallerDiv">
+            <label>Book Title</label><br/>
+            <input type="text" id="title" />
+        </div>
+
+        <div class="libraryFormSmallerDiv">
+            <label>ISBN</label><br/>
+            <input type="number" id="isbn" />
+        </div>
+
+        <div class="libraryFormSmallerDiv">
+            <label>Publisher</label><br/>
+            <input type="text" id="publisher" />
+        </div>
+
+        <div class="libraryFormSmallerDiv">
+            <label>Overdue Fee per day</label><br/>
+            <input type="number" id="overdueFee" step="[0-9]+\.[0-9]?" placeholder="0.0" />
+        </div>
+
+        <div class="libraryFormSmallerDiv">
+            <label>Date supplied</label><br/>
+            <input type="datetime" id="dateSupplied" placeholder="yyyy-mm-dd" /><br/>
+            <label id="validDate">Enter a valid Date.</label>
+        </div>
+
+    </div>
+
+
+    <div id="buttonDiv">
+
+        <input type="reset" value="Reset"/>
+        <input type="submit" value="Save Book"  />
+
+    </div>
+
+</form>
+
+<script>
+    const newBookForm = document.getElementById("libraryForm");
+    const txtIsbn = document.querySelector("#isbn");
+    const txtTitle = document.querySelector("#title");
+    const txtOverdueFee = document.querySelector("#overdueFee");
+    const txtPublisher = document.querySelector("#publisher");
+    const txtDateSupplied = document.querySelector("#dateSupplied");
+
+    newBookForm.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const isbn = txtIsbn.value;
+        const title = txtTitle.value;
+        const overdueFee = parseFloat(txtOverdueFee.value);
+        const publisher = txtPublisher.value;
+        const dateSupplied = txtDateSupplied.value;
+        const newBook = {
+            "isbn" : isbn,
+            "title" : title,
+            "overdueFee" : overdueFee,
+            "publisher" : publisher,
+            "datePublished" : dateSupplied
+        };
+    
+    fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add", {
+        method : "post",
+        body : JSON.stringify(newBook),
+        headers : {
+            "Content-Type" : "application/json"
+        }
+    }).then(function(response){
+        alert("Success!!");
+        return response.json();
+    }).then(function (jsonResData){
+        console.log(jsonResData);
+        txtIsbn.value = "";
+        txtTitle.value = "";
+        txtOverdueFee.value = "0.00";
+        txtPublisher.value = "";
+        txtDateSupplied.value = "";
+        txtTitle.focus();
+        alertMessageBox.style.display = "inline-block";
+    }).catch(function(err){
+        console.error(err);
+        alertMessageBox.classList.remove("alert-success");
+        alertMessageBox.classList.add("alert-danger");
+        alertMessageBox.style.display = "inline-block";
+    })
+});
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style/homepage.css">
+    <title>Books List</title>
+
+</head>
+<body id="bookListBody">
+
+    <form>
+        <ul id="leftNav">
+            <li id="firstli">Library Management System</li>
+            <li>|</li>
+            <li><a class="home" href="index.html">Home</a></li>
+            <li>|</li>
+            <li><a href="addBook.html">Add Book</a></li>
+            <li>|</li>
+            <li><a href="#">List of Books</a></li>
+    
+            <ul id="signin">
+                <label>Hello!</label>
+                <input type="submit" value="Sign in" />
+            </ul>
+        </ul>
+    </form>
+
+<div id="divBooksList">
+    <h1>List of Books</h1>
+    <hr/>
+    
+    <table id="bookTable"> 
+        <thead >
+            <tr>
+                <th>#</th>
+                <th>ISBN</th>
+                <th>Book Title</th>
+                <th>Overdue Fee</th>
+                <th>Publisher</th>
+                <th>Date Published</th>
+            </tr>
+        </thead>
+        <tbody id="tbody" >            
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<script src="js/library.js">
+</script>
+
+</body>
+
+</html>

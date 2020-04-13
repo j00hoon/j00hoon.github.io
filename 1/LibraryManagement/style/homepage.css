@@ -1,0 +1,221 @@
+ul#leftNav
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: steelblue;
+}
+
+ul#leftNav li
+{
+    color: white;
+    font-size: 40px;
+    float: left;
+
+    padding-right: 2%;
+}
+
+ul#leftNav > li#firstli
+{
+    padding-right: 5%;
+}
+
+ul#leftNav a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+ul#leftNav a:hover
+{
+    padding: 100% 0 100% 0;
+    background-color: blue;
+}
+
+ul#leftNav > ul#signin
+{
+    float: right;
+}
+
+ul#signin > label
+{
+    color: white;
+    margin-right: 10px;
+
+    position: absolute;
+    right : 6.5%;
+    top : 4%;
+}
+
+ul#signin > input[type="submit"]
+{
+    position: relative;
+
+    float : right;
+    color: black;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    font-size: 100%;
+}
+
+
+
+
+
+
+
+form#libraryForm
+{
+    margin: 3%;
+}
+
+form#libraryForm > label
+{
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 3%;
+}
+
+
+div#libraryFormDiv
+{
+    margin : 3%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% 100% 100%;
+}
+
+div#libraryFormDiv > div.libraryFormSmallerDiv
+{
+    margin: 10px;
+}
+
+div.libraryFormSmallerDiv > label
+{
+    font-size: 20px;
+}
+
+div.libraryFormSmallerDiv > input
+{
+    width: 90%;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+div.libraryFormSmallerDiv > select#supplier
+{
+    width: 93%;
+    border-radius: 5px 5px 5px 5px;
+    border-width: 1px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+div.libraryFormSmallerDiv > label#validDate
+{
+    font-size: 17px;
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+form#libraryForm > div#buttonDiv
+{
+    font-weight: bold;
+
+    position: absolute;
+    right: 17%;
+
+    display: grid;
+    grid-template-columns: 50% 50% 50%;
+
+}
+
+div#buttonDiv > input[type="reset"]
+{
+    border-radius: 5px 5px 5px 5px;
+    width: 90%;
+    padding: 5px;
+    border-color: dodgerblue;
+    background-color: white;
+    color: dodgerblue;
+}
+
+div#buttonDiv > input[type="button"]
+{
+    border-radius: 5px 5px 5px 5px;
+    width: 90%;
+    padding: 5px;
+    border-color: deeppink;
+    background-color: white;
+    color: deeppink;
+}
+
+div#buttonDiv > input[type="submit"]
+{
+    border-radius: 5px 5px 5px 5px;
+    width: 120%;
+    padding: 5px;
+    border-color: forestgreen;
+    background-color: white;
+    color: forestgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+table#bookTable
+{
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#bookTable td, #bookTable th
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#bookTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#bookTable tr:hover {background-color: #ddd;}
+
+#bookTable th 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+  }
